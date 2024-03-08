@@ -37,7 +37,7 @@ int main () {
     //     10      34
     //     /
     // 20
-    // expect pre-orfder traversal to be: 1, 10, 20, 34.
+    // expect pre-order traversal to be: 1, 10, 20, 34.
 
     struct node* root = CreateNode(1);
     root->LeftPtr = CreateNode(10);
