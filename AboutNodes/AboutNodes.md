@@ -1,5 +1,5 @@
 ## Nodes and tree as a data structure
-Nodes are fundamental unit of data elements in a tree data structure. A node consists of value and one or more pointers for pointing
+Nodes are fundamental units in a tree data structure. A node consists of value and one or more pointers for pointing
 to another node. Below is an example of a node for binary tree. It is for binary tree because this node has maximum two pointers.
 
 ```
