@@ -35,10 +35,9 @@ struct node
 }
 ```
 
-Now to create a new node from the declaration above, we want a function that takes the value as the data, and return a pointer 
-to the new node created with that value. Therefore, we want this function to return a pointer to the `struct`:
+Now to create a new node from the declaration above, we want a function `CreateNode` that takes the value as the data, and return a pointer to the new node created with that value. Therefore, we want this function to return a pointer to the `struct`:
 ```
-struct node* create(value) {
+struct node* CreateNode(value) {
     struct node* newNode = malloc(sizeof(struct node));
     newNode->data = value;
     newNode->LeftPtr = NULL;
@@ -47,7 +46,7 @@ struct node* create(value) {
     return newNode;
 }
 ```
-In this function, the first thing we need to do is to allocate memory for this node. We use `malloc` to accomplish this. Once this is done, it is assigned to a pointer `newNode`. After this is done, we then make assignment to the elements in this node. The new node created will have left and right pointers, pointeing at NULL.
+In this function, the first thing we need to do is to allocate memory for this node. We use `malloc` to accomplish this. Once this is done, it is assigned to a pointer `newNode`. After this is done, we then make assignment to the elements in this node. The new node created will have left and right pointers, pointing at NULL.
 
 ### Implement a tree
 Now we know how to define a node, lets us see how to implement a tree. Here is a simple tree:
