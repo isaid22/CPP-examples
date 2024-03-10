@@ -48,14 +48,14 @@ void postorderTraversal(struct node* root) {
 
 int main () {
     // This is the tree we want to build
-    //         1
+    //         25
     //         /\
     //     10      34
     //     /
     // 20
-    // expect pre-order traversal to be: 1, 10, 20, 34.
+    // expect pre-order traversal to be: 25, 10, 20, 34.
 
-    struct node* root = CreateNode(1);
+    struct node* root = CreateNode(25);
     root->LeftPtr = CreateNode(10);
     root->LeftPtr->LeftPtr = CreateNode(20);
     root->RightPtr = CreateNode(34);

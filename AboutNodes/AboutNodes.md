@@ -51,7 +51,7 @@ In this function, the first thing we need to do is to allocate memory for this n
 ### Implement a tree
 Now we know how to define a node, lets us see how to implement a tree. Here is a simple tree:
 ```
-        1
+        25
         /\
     10      34
     /
@@ -59,7 +59,7 @@ Now we know how to define a node, lets us see how to implement a tree. Here is a
 ```
 To implement this pattern, we will use what we learned about the way to declare the node. First we need to define a root node with value 1:
 ```
-struct node* root = create(1);
+struct node* root = create(25);
 ```
 Then define root node's left child node:
 ```
@@ -81,7 +81,7 @@ Given the description for pre-order traversal, this is the expected output of ou
 
 ```
 Verify tree with pre-order traversal 
-1 10 20 34
+25 10 20 34
 ```
 
 To try this example, use source code shown in [here](./source_code/Nodes.cpp)
@@ -113,7 +113,7 @@ In a pre-order traversal, the printf statement is placed at the beginning of the
 Base on the tree structure in this example, we expect:
 ```
 Verify tree with pre-order traversal: 
-1 10 20 34
+25 10 20 34
 ```
 #### Post-Order Traversal
 To implement this traversal:
@@ -131,7 +131,7 @@ In a post-order traversal, the printf statement is placed after the recursive ca
 Base on the tree structure in this example, we expect:
 ```
 Verify tree with in-order traversal: 
-20 10 1 34
+20 10 25 34
 ```
 
 #### In-Order Traversal
@@ -150,6 +150,6 @@ In an in-order traversal of a binary tree, the printf statement is placed betwee
 Base on the tree structure in this example, we expect:
 ```
 Verify tree with post-order traversal: 
-20 10 34 1
+20 10 34 25
 ```
 
