@@ -110,6 +110,11 @@ void preorderTraversal(Node* root) {
 ```
 In a pre-order traversal, the printf statement is placed at the beginning of the function, before the recursive calls to the left and right subtrees. This results in printing the current node's value before visiting its children.
 
+Base on the tree structure in this example, we expect:
+```
+Verify tree with pre-order traversal: 
+1 10 20 34
+```
 #### Post-Order Traversal
 To implement this traversal:
 ```
@@ -122,6 +127,12 @@ void postOrderTraversal(Node* root) {
 }
 ```
 In a post-order traversal, the printf statement is placed after the recursive calls to the left and right subtrees. This means that the current node's value is printed after visiting its children.
+
+Base on the tree structure in this example, we expect:
+```
+Verify tree with in-order traversal: 
+20 10 1 34
+```
 
 #### In-Order Traversal
 To implement this traversal:
@@ -136,4 +147,9 @@ void inorderTraversal(Node* root) {
 ```
 In an in-order traversal of a binary tree, the printf statement is placed between the recursive calls to the left and right subtrees. This ensures that the values are printed in ascending order because the left subtree contains values smaller than the current node, and the right subtree contains values larger than the current node.
 
+Base on the tree structure in this example, we expect:
+```
+Verify tree with post-order traversal: 
+20 10 34 1
+```
 

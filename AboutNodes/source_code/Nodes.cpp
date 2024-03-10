@@ -30,6 +30,22 @@ void preorderTraversal(struct node* root) {
     }
 }
 
+void inorderTraversal(struct node* root) {
+    if (root != NULL) {
+        inorderTraversal(root->LeftPtr);
+        printf("%d ", root->data); // Print the current node's value
+        inorderTraversal(root->RightPtr);
+    }
+}
+
+void postorderTraversal(struct node* root) {
+    if (root != NULL) {
+        postorderTraversal(root->LeftPtr);
+        postorderTraversal(root->RightPtr);
+        printf("%d ", root->data); // Print the current node's value
+    }
+}
+
 int main () {
     // This is the tree we want to build
     //         1
@@ -44,8 +60,16 @@ int main () {
     root->LeftPtr->LeftPtr = CreateNode(20);
     root->RightPtr = CreateNode(34);
 
-    printf("Verify tree with pre-order traversal \n");
+    printf("Verify tree with pre-order traversal: \n");
     preorderTraversal(root);
+
+    printf("\n");
+    printf("Verify tree with in-order traversal: \n");
+    inorderTraversal(root);
+
+    printf("\n");
+    printf("Verify tree with post-order traversal: \n");
+    postorderTraversal(root);
 
     return 0;
 }
