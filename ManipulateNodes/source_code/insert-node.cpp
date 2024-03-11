@@ -46,18 +46,23 @@ void postorderTraversal(struct node* root) {
     }
 }
 
+struct node* insertKey (){
+
+};
+
+
 int main () {
     // This is the tree we want to build
     //         25
     //         /\
     //     10      34
     //     /
-    // 5
-    // expect pre-order traversal to be: 25, 10, 5, 34.
+    // 20
+    // expect pre-order traversal to be: 25, 10, 20, 34.
 
     struct node* root = CreateNode(25);
     root->LeftPtr = CreateNode(10);
-    root->LeftPtr->LeftPtr = CreateNode(5);
+    root->LeftPtr->LeftPtr = CreateNode(20);
     root->RightPtr = CreateNode(34);
 
     printf("Verify tree with pre-order traversal: \n");
